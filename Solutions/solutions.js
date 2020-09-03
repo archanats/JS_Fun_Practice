@@ -1,4 +1,4 @@
-const identity = x => x;
+const identity = (x) => x;
 
 const addb = (a, b) => a + b;
 
@@ -6,9 +6,17 @@ const subb = (a, b) => a - b;
 
 const mulb = (a, b) => a * b;
 
-const minb = (a, b) => a > b ? b : a;
+const minb = (a, b) => (a > b ? b : a);
 
-const maxb = (a, b) => a > b ? a : b;
+const maxb = (a, b) => (a > b ? a : b);
+
+const add = (...args) => args.reduce((sum, a) => (sum += a), 0);
+
+const sub = (...args) => args.reduce((val, a) => (val -= a));
+
+const mul = (...args) => args.reduce((val, a) => val *= a, 1);
+
+const min = (...args) => args.reduce((a, b) => a > b ? b : a);
 
 module.exports = {
   identity,
@@ -17,10 +25,10 @@ module.exports = {
   mulb,
   minb,
   maxb,
-  // add,
-  // sub,
-  // mul,
-  // min,
+  add,
+  sub,
+  mul,
+  min,
   // max,
   // addRecurse,
   // mulRecurse,
