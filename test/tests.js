@@ -55,21 +55,21 @@ describe('JS_Fun_Practice', function () {
       assert.equal(sol.min(1, 2, 4), 1);
     });
   });
-  //   describe('max(...nums)', function () {
-  //     it('is a max fuction that is generalized for any amount of arguments', function () {
-  //       assert.equal(sol.max(1, 2, 4), 4);
-  //     });
-  //   });
-  //   describe('addRecurse(...nums)', function () {
-  //     it('is an add fuction that is generalized but uses recursion', function () {
-  //       assert.equal(sol.addRecurse(1, 2, 4), 7);
-  //     });
-  //   });
-  //   describe('mulRecurse(...nums)', function () {
-  //     it('is a mul fuction that is generalized but uses recursion', function () {
-  //       assert.equal(sol.mulRecurse(1, 2, 4), 8);
-  //     });
-  //   });
+  describe('max(...nums)', function () {
+    it('is a max fuction that is generalized for any amount of arguments', function () {
+      assert.equal(sol.max(1, 2, 4), 4);
+    });
+  });
+  describe('addRecurse(...nums)', function () {
+    it('is an add fuction that is generalized but uses recursion', function () {
+      assert.equal(sol.addRecurse(1, 2, 4), 7);
+    });
+  });
+  describe('mulRecurse(...nums)', function () {
+    it('is a mul fuction that is generalized but uses recursion', function () {
+      assert.equal(sol.mulRecurse(1, 2, 4), 8);
+    });
+  });
   //   describe('minRecurse(...nums)', function () {
   //     it('is a min fuction that is generalized but uses recursion', function () {
   //       assert.equal(sol.minRecurse(1, 2, 4), 1);

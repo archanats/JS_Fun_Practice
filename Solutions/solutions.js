@@ -18,6 +18,21 @@ const mul = (...args) => args.reduce((val, a) => val *= a, 1);
 
 const min = (...args) => args.reduce((a, b) => a > b ? b : a);
 
+const max = (...args) => args.reduce((a, b) => a > b ? a : b);
+
+const addRecurse = (...args) => {
+  if (args.length < 1)
+    return 0;
+  
+  return args[0] + addRecurse(...args.slice(1));
+}
+
+const mulRecurse = (...args) => {
+  if (args.length < 1)
+    return 1;
+  
+  return args[0] * mulRecurse(...args.slice(1));
+}
 module.exports = {
   identity,
   addb,
@@ -29,9 +44,9 @@ module.exports = {
   sub,
   mul,
   min,
-  // max,
-  // addRecurse,
-  // mulRecurse,
+  max,
+  addRecurse,
+  mulRecurse,
   // minRecurse,
   // maxRecurse,
   // not,
