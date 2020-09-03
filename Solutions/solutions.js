@@ -33,6 +33,21 @@ const mulRecurse = (...args) => {
   
   return args[0] * mulRecurse(...args.slice(1));
 }
+
+const minRecurse = (...args) => {
+  if(args.length < 1)
+    return 1;
+
+  return args[0] > minRecurse(...args.slice(1)) ? minRecurse(...args.slice(1)) : args[0];
+}
+
+const maxRecurse = (...args) => {
+  if(args.length < 1)
+    return 1;
+
+  return args[0] < maxRecurse(...args.slice(1)) ? maxRecurse(...args.slice(1)) : args[0];
+}
+
 module.exports = {
   identity,
   addb,
@@ -47,8 +62,8 @@ module.exports = {
   max,
   addRecurse,
   mulRecurse,
-  // minRecurse,
-  // maxRecurse,
+  minRecurse,
+  maxRecurse,
   // not,
   // acc,
   // accPartial,

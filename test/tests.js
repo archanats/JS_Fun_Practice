@@ -70,16 +70,16 @@ describe('JS_Fun_Practice', function () {
       assert.equal(sol.mulRecurse(1, 2, 4), 8);
     });
   });
-  //   describe('minRecurse(...nums)', function () {
-  //     it('is a min fuction that is generalized but uses recursion', function () {
-  //       assert.equal(sol.minRecurse(1, 2, 4), 1);
-  //     });
-  //   });
-  //   describe('maxRecurse(...nums)', function () {
-  //     it('is a max fuction that is generalized but uses recursion', function () {
-  //       assert.equal(sol.maxRecurse(1, 2, 4), 4);
-  //     });
-  //   });
+  describe('minRecurse(...nums)', function () {
+    it('is a min fuction that is generalized but uses recursion', function () {
+      assert.equal(sol.minRecurse(1, 2, 4), 1);
+    });
+  });
+  describe('maxRecurse(...nums)', function () {
+    it('is a max fuction that is generalized but uses recursion', function () {
+      assert.equal(sol.maxRecurse(1, 2, 4), 4);
+    });
+  });
   //   describe('not(func)', function () {
   //     it('takes a function and returns the negation of its result', function () {
   //       const isOdd = (x) => x % 2 === 1;
