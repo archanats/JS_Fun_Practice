@@ -48,6 +48,19 @@ const maxRecurse = (...args) => {
   return args[0] < maxRecurse(...args.slice(1)) ? maxRecurse(...args.slice(1)) : args[0];
 }
 
+const not = (func) => {
+  return (...args) => !func(...args);
+}
+
+const acc = (f, initVal) => {
+  return(...nums) => {
+      return nums.reduce((acc, num) => {
+          return f(acc,num);
+      }, initVal);
+  }
+  
+}
+
 module.exports = {
   identity,
   addb,
@@ -64,8 +77,8 @@ module.exports = {
   mulRecurse,
   minRecurse,
   maxRecurse,
-  // not,
-  // acc,
+  not,
+  acc,
   // accPartial,
   // accRecurse,
   // fill,

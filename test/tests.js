@@ -80,24 +80,24 @@ describe('JS_Fun_Practice', function () {
       assert.equal(sol.maxRecurse(1, 2, 4), 4);
     });
   });
-  //   describe('not(func)', function () {
-  //     it('takes a function and returns the negation of its result', function () {
-  //       const isOdd = (x) => x % 2 === 1;
-  //       const isEven = sol.not(isOdd);
-  //       assert.equal(isEven(1), false);
-  //       assert.equal(isEven(2), true);
-  //     });
-  //   });
-  //   describe('acc(func,initial)', function () {
-  //     it(`takes a function and an initial value and returns a function
-  //         that runs the initial function on each argument, accumulating the result`, function () {
-  //       let add = sol.acc(sol.addb, 0);
-  //       assert.equal(add(1, 2, 4), 7);
+    describe('not(func)', function () {
+      it('takes a function and returns the negation of its result', function () {
+        const isOdd = (x) => x % 2 === 1;
+        const isEven = sol.not(isOdd);
+        assert.equal(isEven(1), false);
+        assert.equal(isEven(2), true);
+      });
+    });
+  describe('acc(func,initial)', function () {
+    it(`takes a function and an initial value and returns a function
+        that runs the initial function on each argument, accumulating the result`, function () {
+      let add = sol.acc(sol.addb, 0);
+      assert.equal(add(1, 2, 4), 7);
 
-  //       let mul = sol.acc(sol.mulb, 1);
-  //       assert.equal(mul(1, 2, 4), 8);
-  //     });
-  //   });
+      let mul = sol.acc(sol.mulb, 1);
+      assert.equal(mul(1, 2, 4), 8);
+    });
+  });
   //   describe('accPartial(func,start,end)', function () {
   //     it(`takes in a function, a start index, and an end index, and returns a function
   //         that accumulates a subset of its arguments by applying the given function to
